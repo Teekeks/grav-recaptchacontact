@@ -32,7 +32,6 @@ class ReCaptchaContactPlugin extends Plugin
      * @var bool
      */
     protected $shouldLoadCss = false;
-    private $email;
 
     public static function getSubscribedEvents()
     {
@@ -54,9 +53,6 @@ class ReCaptchaContactPlugin extends Plugin
             'onTwigSiteVariables'   => ['onTwigSiteVariables', 0],
             'onPageInitialized'     => ['onPageInitialized', 0]
         ]);
-
-
-        $this->email = new \Grav\Plugin\Email\Email();
     }
 
     public function onGetPageTemplates($event)
@@ -280,11 +276,11 @@ class ReCaptchaContactPlugin extends Plugin
         $email_headers = "From: {$form['name']} <{$form['email']}>";
 
         if ($this->grav['config']->get('plugins.email.enabled')) {
-            $message = $this->email->message($subject, $email_content, 'text/plain')
+            $message = $this->grav['Email']->message($subject, $email_content, 'text/html')
                 ->setFrom($form['email'])
                 ->setTo($recipient);
 
-            return $this->email->send($message);
+            return $this->grav['Email']->send($message);
         } else {
             return (mail($recipient, $subject, $email_content, $email_headers)) ? true : false;
         }

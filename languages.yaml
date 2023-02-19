@@ -48,7 +48,7 @@ en:
 
 de:
   RECAPTCHACONTACT:
-    FORM_LEGEND: "Kontaktiere mich"
+    FORM_LEGEND: "Kontaktieren sie mich"
     SUBJECT: "[Grav] Kontaktanfrage"
     RECIPIENT: "name@provider.de"
     
@@ -66,15 +66,15 @@ de:
     FIELDS:
       NAME:
         LABEL: "Name"
-        PLACEHOLDER: "Dein Name"
+        PLACEHOLDER: "Ihr Name"
 
       EMAIL:
         LABEL: "E-Mail"
-        PLACEHOLDER: "Deine E-Mail"
+        PLACEHOLDER: "Ihre E-Mail"
 
       MESSAGE:
         LABEL: "Nachricht"
-        PLACEHOLDER: "Deine Nachricht"
+        PLACEHOLDER: "Ihre Nachricht"
 
       ANTISPAM:
         LABEL: "Antispam"
@@ -84,8 +84,8 @@ de:
         LABEL: "Abschicken"
 
     MESSAGES:
-      SUCCESS: "Vielen Dank! Deine Nachricht wurde erfolgreich versendet."
-      ERROR: "Oops! Mit der Übertragung gab es ein Problem. Bitte versuche es erneut."
+      SUCCESS: "Vielen Dank! Ihre Nachricht wurde erfolgreich versendet."
+      ERROR: "Oops! Mit der Übertragung gab es ein Problem. Bitte versuchen sie es erneut."
       FAIL: "Oops! Versenden der Nachricht fehlgeschlagen."
 
 es:
